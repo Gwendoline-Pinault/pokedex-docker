@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto+Slab:wght@400;700&display=swap');
+
+:root {
+  --main: rgb(187, 59, 59);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bree Serif', serif;
+  background-color: var(--main)
+}
+
+/* -------- HEADER ---------- */
+
+header {
+  background-color: var(--main);
+  width: 100%;
+  position: fixed;
+  top: 0;
+}
+
+.header__container {
+  background-color: white;
+  color: var(--main);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  margin: 15px;
+  padding: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.header__container a {
+  color: var(--main);
+}
+
+/* --------- MAIN PAGE ---------- */
+
+main {
+  margin-top: 86px;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+h2 {
+  color: white;
+}
+
+.pokemon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pokemon-container__pokemon-card {
+  border-radius: 20px;
+  background-color: rgb(151, 46, 46);
+  padding: 10px;
+  width: 230px;
+  height: 250px;
+  margin: 10px;
+}
+
+.pokemon-container__pokemon-card__content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.pokemon-container__pokemon-card img {
+  width: 220px;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ------- POKEMON DETAIL --------- */
+
+.pokemon-title {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+}
+
+.pokemon-container__details {
+  background-color: rgb(170, 52, 52);
+  border-radius: 10px;
+  width: 50%;
+  padding: 10px;
+  color: white;
+}
+
+td {
+  width: 100px;
+}
+
+td:nth-child(2){
+  text-align: center;
+}
+
+progress {
+  appearance: none;
+}
+::-webkit-progress-bar {
+  background-color: rgb(124, 32, 32);
+  border-radius: 10px;
+}
+::-webkit-progress-value {
+  background-color: white;
+  border-radius: 10px 0 0 10px;
+}
+
+.pokemon-container__details-types label {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* ---------- FOOTER ------------- */
+footer {
+  background-color: var(--main);
+  color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  height: fit-content;
+  height: 30px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+.home-link {
+  text-align: center;
+  display: block;
+  margin-top: 20px;
+}

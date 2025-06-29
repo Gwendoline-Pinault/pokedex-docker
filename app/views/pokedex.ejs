@@ -1,0 +1,16 @@
+<%- include('header') %>
+
+<section class="pokemon-container">
+  
+  <% for (const pokemon of pokemons) { %>
+    <article class="pokemon-container__pokemon-card">
+      <a href="/pokemon/<%= pokemon.numero%>" class="pokemon-container__pokemon-card__content">
+        <img src="/img/<%= pokemon.numero%>.png" alt="<%= pokemon.nom%>">
+        <figcaption>#<%= pokemon.numero%> <%= pokemon.nom %></figcaption>
+      </a>
+    </article>
+  <% } %>
+
+</section>
+
+<%- include('footer') %>

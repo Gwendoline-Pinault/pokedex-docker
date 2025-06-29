@@ -1,0 +1,9 @@
+<%- include('header') %>
+
+<section>
+  <% for type in types { %>
+    <a class="type" style="color:<%= type.color %>;"> <% type.name %> </a> 
+  <% } %>
+</section>
+
+<%- include('footer') %>
