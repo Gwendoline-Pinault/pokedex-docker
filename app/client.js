@@ -1,5 +1,5 @@
 require('dotenv').config();
-const mysql = require('mysql');
+const mysql = require('mysql2/promise');
 
 const client = mysql.createConnection({
   host: process.env.MYSQL_HOST,
@@ -8,7 +8,5 @@ const client = mysql.createConnection({
   database: process.env.MYSQL_DATABASE,
   port: process.env.MYSQL_PORT || 3306, // Default MySQL port
 });
-
-client.connect();
 
 module.exports = client;

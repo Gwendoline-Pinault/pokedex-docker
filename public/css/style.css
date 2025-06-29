@@ -120,11 +120,11 @@ progress {
 }
 ::-webkit-progress-bar {
   background-color: rgb(124, 32, 32);
-  border-radius: 10px;
+  border-radius: 5px;
 }
 ::-webkit-progress-value {
   background-color: white;
-  border-radius: 10px 0 0 10px;
+  border-radius: 5px;
 }
 
 .pokemon-container__details-types label {
@@ -132,6 +132,22 @@ progress {
   margin: 0 5px;
   border-radius: 5px;
   text-align: center;
+}
+
+.type-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.type {
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 5px;
+  text-decoration: none;
 }
 
 /* ---------- FOOTER ------------- */

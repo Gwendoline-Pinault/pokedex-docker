@@ -1,0 +1,20 @@
+<%- include('header') %>
+
+<h2 class="pokemon-title">Pokémons de type <%= type.name %></h2>
+
+<section class="pokemon-container">
+  <% for (const pokemon of pokemons) { %>
+      <article class="pokemon-container__pokemon-card">
+        <a href="/pokemon/<%= pokemon.numero%>" class="pokemon-container__pokemon-card__content">
+          <img src="/img/<%= pokemon.numero%>.png" alt="<%= pokemon.nom%>">
+          <figcaption>#<%= pokemon.numero%> <%= pokemon.nom %></figcaption>
+        </a>
+      </article>
+  <% } %>
+  <% if (pokemons.length < 1) { %>
+    <p style="color: white">Aucun Pokemon de ce type.</p>
+  <% } %>
+</section>
+
+<a href="/types" class="home-link">Revenir à la liste des types</a>
+<%- include('footer') %>

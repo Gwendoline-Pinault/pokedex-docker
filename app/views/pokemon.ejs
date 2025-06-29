@@ -1,21 +1,21 @@
 <%- include('header') %>
-<h2 class="pokemon-title">Détails de <%= pokemon.nom %></h2>
+<h2 class="pokemon-title">Détails de <%= pokemon[0].nom %></h2>
 
 <section class="pokemon-container">
 
-  <img src="/img/<%= pokemon.numero %>.png" alt="<%= pokemon.nom %>">
+  <img src="/img/<%= pokemon[0].numero %>.png" alt="<%= pokemon[0].nom %>">
 
   <article class="pokemon-container__details">
-    <h3> #<%= pokemon.numero %> <%= pokemon.nom %></h3>
+    <h3> #<%= pokemon[0].numero %> <%= pokemon[0].nom %></h3>
 
     <p class="pokemon-container__details-types"> 
       <% if (pokemonTypes.length === 2) { %>
-        <label style="background-color: #<%= pokemonTypes[0].color %>"> <%= pokemonTypes[0].name %> </label> 
-        <label style="background-color: #<%= pokemonTypes[1].color %>"> <%= pokemonTypes[1].name %> </label> 
+        <label style="background-color: <%= pokemonTypes[0].color %>"> <%= pokemonTypes[0].name %> </label> 
+        <label style="background-color: <%= pokemonTypes[1].color %>"> <%= pokemonTypes[1].name %> </label> 
       <% } %>
 
       <% if (pokemonTypes.length === 1) { %>
-        <label style="background-color: #<%= pokemonTypes[0].color %>"> <%= pokemonTypes[0].name %> </label> 
+        <label style="background-color: <%= pokemonTypes[0].color %>"> <%= pokemonTypes[0].name %> </label> 
       <% } %>
     </p> 
 
@@ -25,44 +25,44 @@
       <tr>
         <td>PV</td>
         <td>
-          <%= pokemon.pv %>
+          <%= pokemon[0].pv %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.pv %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].pv %>"></progress> </td>
       </tr>
       <tr>
         <td>Attaque</td>
         <td>
-          <%= pokemon.attaque %>
+          <%= pokemon[0].attaque %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.attaque %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].attaque %>"></progress> </td>
       </tr>
       <tr>
         <td>Défense</td>
         <td>
-          <%= pokemon.defense %>
+          <%= pokemon[0].defense %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.defense %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].defense %>"></progress> </td>
       </tr>
       <tr>
         <td>Attaque spé.</td>
         <td>
-          <%= pokemon.attaque_spe %>
+          <%= pokemon[0].attaque_spe %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.attaque_spe %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].attaque_spe %>"></progress> </td>
       </tr>
       <tr>
         <td>Défense spé.</td>
         <td>
-          <%= pokemon.defense_spe %>
+          <%= pokemon[0].defense_spe %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.defense_spe %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].defense_spe %>"></progress> </td>
       </tr>
       <tr>
         <td>Vitesse</td>
         <td>
-          <%= pokemon.vitesse %>
+          <%= pokemon[0].vitesse %>
         </td>
-        <td> <progress max="255" value="<%= pokemon.vitesse %>"></progress> </td>
+        <td> <progress max="255" value="<%= pokemon[0].vitesse %>"></progress> </td>
       </tr>
     </tbody>
     </table>
