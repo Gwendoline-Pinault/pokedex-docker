@@ -1,10 +1,11 @@
-FROM node:lts-alpine
-ENV NODE_ENV=production
-WORKDIR /usr/src/app
-COPY ["package.json", "package-lock.json*", "./"]
-RUN npm install --production --silent && mv node_modules ../
+FROM node:20.18.0
+WORKDIR /app
+COPY ./package*.json ./
+# Installe les dépendances
+RUN npm install
+# Copie le reste de l'application
 COPY . .
+# Expose le port sur lequel l'application écoute
 EXPOSE 3000
-RUN chown -R node /usr/src/app
-USER node
+# Commande pour démarrer l'application
 CMD ["npm", "start"]

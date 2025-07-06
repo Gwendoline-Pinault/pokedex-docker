@@ -3,3 +3,4 @@
 /public/img
 image.png
 .DS_Store
+.env.*

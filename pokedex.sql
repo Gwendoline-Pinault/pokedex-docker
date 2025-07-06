@@ -1,6 +1,7 @@
 --
 -- Structure de la table 'pokemon'
 --
+USE pokedex;
 
 DROP TABLE IF EXISTS pokemon;
 

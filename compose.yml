@@ -1,0 +1,32 @@
+services:
+  mysql:
+    image: mysql:8.4.2
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    ports:
+      - "3306:3306"
+    volumes:
+      - data:/var/lib/mysql
+      - ./.docker/setup.sql:/docker-entrypoint-initdb.d/setup.sql
+      - ./pokedex.sql:/docker-entrypoint-initdb.d/pokedex.sql
+    env_file:
+      - ./.env
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - mysql
+    networks:
+      - pokedex
+    env_file:
+      - ./.env
+volumes:
+  data:
+
+networks:
+  pokedex:
+    driver: bridge
