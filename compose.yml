@@ -11,6 +11,8 @@ services:
       - ./pokedex.sql:/docker-entrypoint-initdb.d/pokedex.sql
     env_file:
       - ./.env
+    networks:
+      - pokedex
 
   app:
     build:

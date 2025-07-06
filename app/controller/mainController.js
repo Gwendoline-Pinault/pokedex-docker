@@ -22,7 +22,6 @@ const pokedex = {
       console.trace(error);
       next();
     }
-    
   }
 }
 
